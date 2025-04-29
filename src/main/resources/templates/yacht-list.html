@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список яхт</title>
+    <!-- Подключение Bootstrap через CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Выберите яхту вашей мечты</h1>
+
+    <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Название</th>
+            <th scope="col">Вместимость</th>
+            <th scope="col">Действия</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="yachtView : ${yachtViews}">
+            <td>
+                <img th:src="@{${yachtView.imagePath}}" class="img-fluid" alt="Yacht image" style="max-width: 150px;">
+            </td>
+            <td th:text="${yachtView.yacht.name}">Yacht Name</td>
+            <td th:text="${yachtView.yacht.capacity}">Capacity</td>
+            <td>
+                <a th:href="@{'/yachts/' + ${yachtView.yacht.id} + '/booking'}" class="btn btn-warning btn-sm">Забронировать</a>
+                <a th:href="@{'/yachts/' + ${yachtView.yacht.id} + '/description'}" class="btn btn-danger btn-sm">Подробнее</a>
+            </td>
+        </tr>
+        </tbody>
+
+    </table>
+</div>
+
+<!-- Подключение скриптов Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

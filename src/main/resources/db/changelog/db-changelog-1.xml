@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <!-- Создание таблицы Customer -->
+    <changeSet id="1" author="your_username">
+        <createTable tableName="customer">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="surname" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <!-- Вставка данных в таблицу Customer -->
+    <changeSet id="2" author="your_username">
+        <insert tableName="customer">
+            <column name="id" value="1"/>
+            <column name="name" value="John"/>
+            <column name="surname" value="Doe"/>
+            <column name="email" value="john.doe@example.com"/>
+        </insert>
+        <insert tableName="customer">
+            <column name="id" value="2"/>
+            <column name="name" value="Alice"/>
+            <column name="surname" value="Smith"/>
+            <column name="email" value="alice.smith@example.com"/>
+        </insert>
+    </changeSet>
+
+    <!-- Создание таблицы Yacht -->
+    <changeSet id="3" author="your_username">
+        <createTable tableName="yacht">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="capacity" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="type" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="price" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="available" type="boolean">
+                <constraints nullable="false"/>
+            </column>
+            <column name="image" type="varchar(255)">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <!-- Вставка данных в таблицу Yacht -->
+    <changeSet id="4" author="your_username">
+        <insert tableName="yacht">
+            <column name="id" value="1"/>
+            <column name="name" value="Luxury Yacht"/>
+            <column name="capacity" value="10"/>
+            <column name="type" value="Luxury"/>
+            <column name="price" value="5000000"/>
+            <column name="available" value="true"/>
+            <column name="image" value="images/luxury-yacht.jpg"/>
+        </insert>
+        <insert tableName="yacht">
+            <column name="id" value="2"/>
+            <column name="name" value="Explorer Yacht"/>
+            <column name="capacity" value="20"/>
+            <column name="type" value="Explorer"/>
+            <column name="price" value="10000000"/>
+            <column name="available" value="true"/>
+            <column name="image" value="images/explorer-yacht.jpg"/>
+        </insert>
+    </changeSet>
+
+    <!-- Создание таблицы Booking -->
+    <changeSet id="5" author="your_username">
+        <createTable tableName="booking">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="user_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="yacht_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="from_date" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="to_date" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="status" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <!-- Вставка данных в таблицу Booking -->
+    <changeSet id="6" author="your_username">
+        <insert tableName="booking">
+            <column name="id" value="1"/>
+            <column name="user_id" value="1"/>
+            <column name="yacht_id" value="1"/>
+            <column name="from_date" valueDate="2025-06-01"/>
+            <column name="to_date" valueDate="2025-06-10"/>
+            <column name="status" value="BOOKED"/>
+        </insert>
+        <insert tableName="booking">
+            <column name="id" value="2"/>
+            <column name="user_id" value="2"/>
+            <column name="yacht_id" value="2"/>
+            <column name="from_date" valueDate="2025-07-01"/>
+            <column name="to_date" valueDate="2025-07-15"/>
+            <column name="status" value="BOOKED"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
