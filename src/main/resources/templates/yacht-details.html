@@ -1,10 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title th:text="'Яхта ' + ${yacht.name}">Яхта</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" th:href="@{/styles/yacht-card-styles.css}">
 </head>
 <body>
+
+<div class="yacht-container">
+    <!-- Фото -->
+    <img th:src="@{'/' + ${yacht.image}}"
+         th:alt="${yacht.name}"
+         class="yacht-image-large"
+         onerror="this.src='https://via.placeholder.com/800x400/e2e8f0/64748b?text=No+Image'">
+
+    <!-- Информация -->
+    <div class="yacht-card">
+        <div class="yacht-content">
+            <div>
+                <h2 class="yacht-name" th:text="${yacht.name}">Yacht Name</h2>
+                <p class="yacht-details" th:text="${yacht.location != null ? yacht.location : 'Локация не указана'}">
+                    Локация</p>
+                <p class="yacht-description"
+                   th:text="${yacht.description != null ? yacht.description : 'Описание отсутствует'}">
+                    Просторная и роскошная яхта для идеального отдыха.
+                </p>
+
+                <ul class="yacht-characteristics">
+                    <li><strong>Вместимость:</strong> <span th:text="${yacht.capacity}">?</span> человек</li>
+                    <li><strong>Тип:</strong> <span th:text="${yacht.type != null ? yacht.type : 'Не указано'}">Тип не найден</span></li>
+                    <li><strong>Производитель:</strong> <span th:text="${yacht.manufacturer != null ? yacht.manufacturer : 'Не указан'}">Производитель не найден</span></li>
+                    <li><strong>Год постройки:</strong> <span th:text="${yacht.yearBuilt != null ? yacht.yearBuilt : 'Не указан'}">Год не найден</span></li>
+                    <li><strong>Цена за день:</strong> <span class="yacht-price" th:text="${yacht.price}">Цена не найдена</span> $</li>
+                    <li><strong>Доступна:</strong> <span th:text="${yacht.available ? 'Да' : 'Нет'}">Не найдено</span></li>
+                </ul>
+            </div>
+
+            <div>
+                <button class="book-button" onclick="bookYacht()">Забронировать</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function bookYacht() {
+        alert('Функция бронирования будет добавлена позже!');
+    }
+</script>
 
 </body>
 </html>

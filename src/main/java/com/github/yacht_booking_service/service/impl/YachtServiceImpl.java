@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class YachtServiceImpl implements YachtService {
@@ -22,8 +21,9 @@ public class YachtServiceImpl implements YachtService {
         return yachtRepository.findAll();
     }
 
-    public Optional<Yacht> getYachtById(Long id) {
-        return yachtRepository.findById(id);
+    public Yacht getYachtById(Long id) {
+        return yachtRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException(String.format("Яхта с id %d не найдена", id)));
     }
 
     @Override

@@ -72,7 +72,8 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
-.book-button {
+/*TODO: Вынести стайлы кнопки отдельно т.к. повторяются*/
+.book-button, .details-button {
     background: linear-gradient(135deg, #2bc0e4, #1f8f88); /* обновлено */
     color: white;
     border: none;
@@ -84,7 +85,7 @@ body {
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(43, 192, 228, 0.3);
 }
-.book-button:hover {
+.book-button:hover, .details-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(43, 192, 228, 0.4);
 }

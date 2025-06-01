@@ -34,4 +34,19 @@ public class Yacht {
 
     @Column(name = "image")
     private String image;
+
+    @Column(name = "manufacturer")
+    private String manufacturer;
+
+    @Column(name = "year_built")
+    private Integer yearBuilt;
+
+    @Column(name = "description", columnDefinition = "TEXT")
+    private String description;
+
+    @Column(name = "location", length = 100)
+    private String location;
+
+    @Column(name = "rating")
+    private Integer rating;
 }

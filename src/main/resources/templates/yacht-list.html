@@ -28,6 +28,12 @@
             <button class="book-button" onclick="bookYacht()">
                 Забронировать
             </button>
+
+            <button class="details-button"
+                    th:attr="data-id=${yacht.id}"
+                    onclick="openYachtDescription(this)">
+                Подробнее
+            </button>
         </div>
     </div>
 
@@ -42,6 +48,11 @@
     function bookYacht() {
         alert('Функция бронирования будет добавлена позже!');
     }
+
+    function openYachtDescription(button) {
+        const id = button.getAttribute('data-id');
+        window.location.href = '/yacht/' + id;
+}
 </script>
 </body>
 </html>

@@ -1,0 +1,97 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+    min-height: 100vh;
+}
+
+.yacht-container {
+    max-width: 1000px;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+}
+
+.yacht-image-large {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-bottom: 20px;
+}
+
+.yacht-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+}
+
+.yacht-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.yacht-name {
+    font-size: 28px;
+    font-weight: bold;
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+.yacht-details {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 15px;
+}
+
+.yacht-description {
+    font-size: 15px;
+    color: #334155;
+    margin-bottom: 20px;
+}
+
+.yacht-characteristics {
+    font-size: 14px;
+    color: #475569;
+    margin-bottom: 20px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.yacht-characteristics li {
+    margin-bottom: 8px;
+}
+
+.yacht-price {
+    font-weight: bold;
+    color: #0f172a;
+}
+
+.book-button {
+    background: linear-gradient(135deg, #2bc0e4, #1f8f88);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(43, 192, 228, 0.3);
+}
+.book-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(43, 192, 228, 0.4);
+}
+
+@media (max-width: 768px) {
+    .yacht-container {
+        padding: 0 10px;
+    }
+
+    .yacht-image-large {
+        max-height: 250px;
+    }
+}

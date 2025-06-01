@@ -39,7 +39,7 @@
         </insert>
     </changeSet>
 
-    <!-- Создание таблицы Yacht -->
+    <!-- Создание таблицы Yacht с расширенной моделью -->
     <changeSet id="3" author="your_username">
         <createTable tableName="yacht">
             <column name="id" type="bigint">
@@ -63,125 +63,186 @@
             <column name="image" type="varchar(255)">
                 <constraints nullable="true"/>
             </column>
+            <!-- Новые поля -->
+            <column name="manufacturer" type="varchar(255)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="year_built" type="int">
+                <constraints nullable="true"/>
+            </column>
+            <column name="description" type="text">
+                <constraints nullable="true"/>
+            </column>
+            <column name="location" type="varchar(255)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="rating" type="decimal(3,2)">
+                <constraints nullable="true"/>
+            </column>
         </createTable>
     </changeSet>
 
-    <!-- Вставка данных в таблицу Yacht -->
+    <!-- Вставка данных в таблицу Yacht с новыми полями -->
     <changeSet id="4" author="your_username">
         <insert tableName="yacht">
             <column name="id" value="1"/>
             <column name="name" value="Luxury Yacht"/>
             <column name="capacity" value="10"/>
             <column name="type" value="Luxury"/>
-            <column name="price" value="5000000"/>
+            <column name="price" value="5000"/>
             <column name="available" value="true"/>
-            <column name="image" value="images/luxury-yacht.jpg"/>
+            <column name="image" value="images/yacht/y1.jpg"/>
+            <column name="manufacturer" value="YachtMaker Inc."/>
+            <column name="year_built" value="2018"/>
+            <column name="description" value="Роскошная яхта премиум-класса с просторными каютами и панорамными окнами. Оснащена современной навигационной системой и мощным двигателем для плавного хода. На борту имеется джакузи на верхней палубе и профессиональный экипаж. Идеальный выбор для VIP-отдыха на воде с максимальным комфортом."/>
+            <column name="location" value="Marina Bay"/>
+            <column name="rating" value="4.75"/>
         </insert>
         <insert tableName="yacht">
             <column name="id" value="2"/>
             <column name="name" value="Explorer Yacht"/>
             <column name="capacity" value="20"/>
             <column name="type" value="Explorer"/>
-            <column name="price" value="10000000"/>
+            <column name="price" value="1000"/>
             <column name="available" value="true"/>
-            <column name="image" value="images/explorer-yacht.jpg"/>
+            <column name="image" value="images/yacht/y2.jpg"/>
+            <column name="manufacturer" value="Explorer Co."/>
+            <column name="year_built" value="2020"/>
+            <column name="description" value="Прочная экспедиционная яхта с усиленным корпусом для плавания в сложных условиях. Вместительные топливные баки обеспечивают дальность хода до 5000 морских миль. Просторные грузовые помещения позволяют брать на борт дополнительное снаряжение. Отличный вариант для исследовательских миссий и экстремальных путешествий."/>
+            <column name="location" value="Ocean Port"/>
+            <column name="rating" value="4.85"/>
         </insert>
     </changeSet>
 
-    <!-- Вставка данных в таблицу Yacht -->
+    <!-- Вставка дополнительных яхт с новыми полями -->
     <changeSet id="7" author="your_username">
         <insert tableName="yacht">
             <column name="id" value="3"/>
             <column name="name" value="Adventure Cruiser"/>
             <column name="capacity" value="16"/>
             <column name="type" value="Explorer"/>
-            <column name="price" value="8500000"/>
+            <column name="price" value="850"/>
             <column name="available" value="true"/>
-            <column name="image" value="images/yacht/explorer-yacht.jpg"/>
+            <column name="image" value="images/yacht/y3.jpg"/>
+            <column name="manufacturer" value="Cruisers Ltd."/>
+            <column name="year_built" value="2019"/>
+            <column name="description" value="Крейсерская яхта с отличными мореходными качествами и стабилизаторами качки. Вместительные каюты оформлены в морском стиле с использованием натуральных материалов. Имеется просторная кают-компания с панорамным обзором и современной кухней. Подходит для длительных круизов с комфортом."/>
+            <column name="location" value="Harbor View"/>
+            <column name="rating" value="4.65"/>
         </insert>
         <insert tableName="yacht">
             <column name="id" value="4"/>
             <column name="name" value="Royal Elegance"/>
             <column name="capacity" value="12"/>
             <column name="type" value="Luxury"/>
-            <column name="price" value="7500000"/>
+            <column name="price" value="750"/>
             <column name="available" value="true"/>
-            <column name="image" value="images/yacht/luxury-yacht.jpg"/>
+            <column name="image" value="images/yacht/y4.jpg"/>
+            <column name="manufacturer" value="Elegance Yachts"/>
+            <column name="year_built" value="2017"/>
+            <column name="description" value="Элегантная яхта с королевским интерьером, отделанным ценными породами дерева и мрамором. Главная каюта площадью 30 м² с гардеробной и ванной комнатой. На борту имеется винный погреб и сервис по вызову шеф-повара. Создана для тех, кто ценит изысканность и приватность."/>
+            <column name="location" value="Bay Side"/>
+            <column name="rating" value="4.70"/>
         </insert>
         <insert tableName="yacht">
             <column name="id" value="5"/>
             <column name="name" value="Sea Voyager"/>
             <column name="capacity" value="18"/>
             <column name="type" value="Explorer"/>
-            <column name="price" value="9200000"/>
+            <column name="price" value="920"/>
             <column name="available" value="true"/>
-            <column name="image" value="images/yacht/explorer-yacht.jpg"/>
+            <column name="image" value="images/yacht/y5.jpg"/>
+            <column name="manufacturer" value="Voyager Ships"/>
+            <column name="year_built" value="2021"/>
+            <column name="description" value="Надежная яхта для океанских переходов с системой опреснения воды и солнечными батареями. Просторные складские помещения позволяют брать запас провизии на месяц автономного плавания. Оснащена профессиональной рыболовной снастью и оборудованием для дайвинга. Мечта для любителей дальних морских приключений."/>
+            <column name="location" value="Dock 9"/>
+            <column name="rating" value="4.80"/>
         </insert>
         <insert tableName="yacht">
             <column name="id" value="6"/>
             <column name="name" value="Majestic Pearl"/>
             <column name="capacity" value="14"/>
             <column name="type" value="Luxury"/>
-            <column name="price" value="6700000"/>
+            <column name="price" value="670"/>
             <column name="available" value="true"/>
-            <column name="image" value="images/yacht/luxury-yacht.jpg"/>
+            <column name="image" value="images/yacht/y6.jpg"/>
+            <column name="manufacturer" value="Pearl Boats"/>
+            <column name="year_built" value="2016"/>
+            <column name="description" value="Белоснежная яхта с жемчужным отливом корпуса и дизайнерским интерьером в светлых тонах. Главная палуба с бассейном и баром превращается в площадку для вечерних приемов. Каждая каюта оборудована системой умный дом и панорамными окнами. Симбиоз роскоши и современных технологий."/>
+            <column name="location" value="Sunset Marina"/>
+            <column name="rating" value="4.60"/>
         </insert>
         <insert tableName="yacht">
             <column name="id" value="7"/>
             <column name="name" value="Ocean Spirit"/>
             <column name="capacity" value="22"/>
             <column name="type" value="Explorer"/>
-            <column name="price" value="9900000"/>
+            <column name="price" value="990"/>
             <column name="available" value="true"/>
-            <column name="image" value="images/yacht/explorer-yacht.jpg"/>
+            <column name="image" value="images/yacht/y7.jpg"/>
+            <column name="manufacturer" value="Oceanic Ltd."/>
+            <column name="year_built" value="2022"/>
+            <column name="description" value="Экспедиционная яхта нового поколения с гибридной силовой установкой и системой динамического позиционирования. Вертолетная площадка и подводный дрон расширяют исследовательские возможности. Просторные лаборатории и научное оборудование на борту. Для тех, кто хочет изучать океан с комфортом."/>
+            <column name="location" value="Port Royale"/>
+            <column name="rating" value="4.90"/>
         </insert>
         <insert tableName="yacht">
             <column name="id" value="8"/>
             <column name="name" value="Crystal Dream"/>
             <column name="capacity" value="11"/>
             <column name="type" value="Luxury"/>
-            <column name="price" value="5400000"/>
+            <column name="price" value="540"/>
             <column name="available" value="true"/>
-            <column name="image" value="images/yacht/luxury-yacht.jpg"/>
+            <column name="image" value="images/yacht/y8.jpg"/>
+            <column name="manufacturer" value="Dream Boats"/>
+            <column name="year_built" value="2015"/>
+            <column name="description" value="Яхта с прозрачными элементами корпуса, создающими эффект парения над водой. Интерьеры в стиле хай-тек с подсветкой и стеклянными перегородками. Спа-комплекс с хаммамом и массажными кабинетами. Идеальна для романтических путешествий и фотосессий на фоне морских пейзажей."/>
+            <column name="location" value="Crystal Bay"/>
+            <column name="rating" value="4.55"/>
         </insert>
         <insert tableName="yacht">
             <column name="id" value="9"/>
             <column name="name" value="Polar Star"/>
             <column name="capacity" value="19"/>
             <column name="type" value="Explorer"/>
-            <column name="price" value="8700000"/>
+            <column name="price" value="870"/>
             <column name="available" value="true"/>
-            <column name="image" value="images/yacht/explorer-yacht.jpg"/>
+            <column name="image" value="images/yacht/y9.jpg"/>
+            <column name="manufacturer" value="Star Yachts"/>
+            <column name="year_built" value="2018"/>
+            <column name="description" value="Специализированная яхта для арктических экспедиций с усиленной теплоизоляцией и ледовым классом корпуса. Система отопления работает даже при экстремально низких температурах. На борту имеется оборудование для наблюдения за северным сиянием. Незаменима для путешествий в высокие широты."/>
+            <column name="location" value="North Dock"/>
+            <column name="rating" value="4.70"/>
         </insert>
         <insert tableName="yacht">
             <column name="id" value="10"/>
             <column name="name" value="Golden Horizon"/>
             <column name="capacity" value="13"/>
             <column name="type" value="Luxury"/>
-            <column name="price" value="6200000"/>
+            <column name="price" value="620"/>
             <column name="available" value="true"/>
-            <column name="image" value="images/yacht/luxury-yacht.jpg"/>
+            <column name="image" value="images/yacht/y10.jpg"/>
+            <column name="manufacturer" value="Horizon Boats"/>
+            <column name="year_built" value="2014"/>
+            <column name="description" value="Роскошная яхта с золотыми акцентами в отделке и мебелью из редких пород дерева. Кинозал на 10 персон с коллекцией фильмов о море. Вип-каюты с индивидуальным дизайном и антикварными предметами интерьера. Персональный сомелье и шеф-повар сделают ваше путешествие незабываемым."/>
+            <column name="location" value="Golden Marina"/>
+            <column name="rating" value="4.50"/>
         </insert>
         <insert tableName="yacht">
             <column name="id" value="11"/>
-            <column name="name" value="Mega Serenity"/>
-            <column name="capacity" value="30"/>
-            <column name="type" value="Mega"/>
-            <column name="price" value="15000000"/>
+            <column name="name" value="Sunset Voyager"/>
+            <column name="capacity" value="21"/>
+            <column name="type" value="Explorer"/>
+            <column name="price" value="940"/>
             <column name="available" value="true"/>
-            <column name="image" value="images/yacht/mega-yacht.jpg"/>
-        </insert>
-        <insert tableName="yacht">
-            <column name="id" value="12"/>
-            <column name="name" value="Infinity One"/>
-            <column name="capacity" value="32"/>
-            <column name="type" value="Mega"/>
-            <column name="price" value="18000000"/>
-            <column name="available" value="true"/>
-            <column name="image" value="images/yacht/mega-yacht.jpg"/>
+            <column name="image" value="images/yacht/y1.jpg"/>
+            <column name="manufacturer" value="Voyager Ships"/>
+            <column name="year_built" value="2019"/>
+            <column name="description" value="Универсальная круизная яхта с панорамными обзорными площадками для наблюдения за закатами. Оснащена гидравлической платформой для спуска катеров и водного снаряжения. Просторные открытые палубы с зонами отдыха и барбекю. Отличный выбор для комфортных путешествий большой компанией."/>
+            <column name="location" value="Sunset Bay"/>
+            <column name="rating" value="4.75"/>
         </insert>
     </changeSet>
-
 
     <!-- Создание таблицы Booking -->
     <changeSet id="5" author="your_username">
@@ -189,19 +250,16 @@
             <column name="id" type="bigint">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="user_id" type="bigint">
+            <column name="customer_id" type="bigint">
                 <constraints nullable="false"/>
             </column>
             <column name="yacht_id" type="bigint">
                 <constraints nullable="false"/>
             </column>
-            <column name="from_date" type="date">
+            <column name="start_date" type="date">
                 <constraints nullable="false"/>
             </column>
-            <column name="to_date" type="date">
-                <constraints nullable="false"/>
-            </column>
-            <column name="status" type="varchar(255)">
+            <column name="end_date" type="date">
                 <constraints nullable="false"/>
             </column>
         </createTable>
@@ -211,19 +269,17 @@
     <changeSet id="6" author="your_username">
         <insert tableName="booking">
             <column name="id" value="1"/>
-            <column name="user_id" value="1"/>
+            <column name="customer_id" value="1"/>
             <column name="yacht_id" value="1"/>
-            <column name="from_date" valueDate="2025-06-01"/>
-            <column name="to_date" valueDate="2025-06-10"/>
-            <column name="status" value="BOOKED"/>
+            <column name="start_date" value="2024-06-01"/>
+            <column name="end_date" value="2024-06-07"/>
         </insert>
         <insert tableName="booking">
             <column name="id" value="2"/>
-            <column name="user_id" value="2"/>
+            <column name="customer_id" value="2"/>
             <column name="yacht_id" value="2"/>
-            <column name="from_date" valueDate="2025-07-01"/>
-            <column name="to_date" valueDate="2025-07-15"/>
-            <column name="status" value="BOOKED"/>
+            <column name="start_date" value="2024-07-10"/>
+            <column name="end_date" value="2024-07-15"/>
         </insert>
     </changeSet>
 

@@ -3,7 +3,6 @@ package com.github.yacht_booking_service.service;
 import com.github.yacht_booking_service.model.Yacht;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface YachtService {
 
@@ -12,5 +11,5 @@ public interface YachtService {
     void deleteYacht();
     List<Yacht> getAllYachts();
 
-    Optional<Yacht> getYachtById(Long id);
+    Yacht getYachtById(Long id);
 }
