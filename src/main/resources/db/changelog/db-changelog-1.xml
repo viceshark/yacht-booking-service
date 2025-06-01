@@ -88,6 +88,101 @@
         </insert>
     </changeSet>
 
+    <!-- Вставка данных в таблицу Yacht -->
+    <changeSet id="7" author="your_username">
+        <insert tableName="yacht">
+            <column name="id" value="3"/>
+            <column name="name" value="Adventure Cruiser"/>
+            <column name="capacity" value="16"/>
+            <column name="type" value="Explorer"/>
+            <column name="price" value="8500000"/>
+            <column name="available" value="true"/>
+            <column name="image" value="images/yacht/explorer-yacht.jpg"/>
+        </insert>
+        <insert tableName="yacht">
+            <column name="id" value="4"/>
+            <column name="name" value="Royal Elegance"/>
+            <column name="capacity" value="12"/>
+            <column name="type" value="Luxury"/>
+            <column name="price" value="7500000"/>
+            <column name="available" value="true"/>
+            <column name="image" value="images/yacht/luxury-yacht.jpg"/>
+        </insert>
+        <insert tableName="yacht">
+            <column name="id" value="5"/>
+            <column name="name" value="Sea Voyager"/>
+            <column name="capacity" value="18"/>
+            <column name="type" value="Explorer"/>
+            <column name="price" value="9200000"/>
+            <column name="available" value="true"/>
+            <column name="image" value="images/yacht/explorer-yacht.jpg"/>
+        </insert>
+        <insert tableName="yacht">
+            <column name="id" value="6"/>
+            <column name="name" value="Majestic Pearl"/>
+            <column name="capacity" value="14"/>
+            <column name="type" value="Luxury"/>
+            <column name="price" value="6700000"/>
+            <column name="available" value="true"/>
+            <column name="image" value="images/yacht/luxury-yacht.jpg"/>
+        </insert>
+        <insert tableName="yacht">
+            <column name="id" value="7"/>
+            <column name="name" value="Ocean Spirit"/>
+            <column name="capacity" value="22"/>
+            <column name="type" value="Explorer"/>
+            <column name="price" value="9900000"/>
+            <column name="available" value="true"/>
+            <column name="image" value="images/yacht/explorer-yacht.jpg"/>
+        </insert>
+        <insert tableName="yacht">
+            <column name="id" value="8"/>
+            <column name="name" value="Crystal Dream"/>
+            <column name="capacity" value="11"/>
+            <column name="type" value="Luxury"/>
+            <column name="price" value="5400000"/>
+            <column name="available" value="true"/>
+            <column name="image" value="images/yacht/luxury-yacht.jpg"/>
+        </insert>
+        <insert tableName="yacht">
+            <column name="id" value="9"/>
+            <column name="name" value="Polar Star"/>
+            <column name="capacity" value="19"/>
+            <column name="type" value="Explorer"/>
+            <column name="price" value="8700000"/>
+            <column name="available" value="true"/>
+            <column name="image" value="images/yacht/explorer-yacht.jpg"/>
+        </insert>
+        <insert tableName="yacht">
+            <column name="id" value="10"/>
+            <column name="name" value="Golden Horizon"/>
+            <column name="capacity" value="13"/>
+            <column name="type" value="Luxury"/>
+            <column name="price" value="6200000"/>
+            <column name="available" value="true"/>
+            <column name="image" value="images/yacht/luxury-yacht.jpg"/>
+        </insert>
+        <insert tableName="yacht">
+            <column name="id" value="11"/>
+            <column name="name" value="Mega Serenity"/>
+            <column name="capacity" value="30"/>
+            <column name="type" value="Mega"/>
+            <column name="price" value="15000000"/>
+            <column name="available" value="true"/>
+            <column name="image" value="images/yacht/mega-yacht.jpg"/>
+        </insert>
+        <insert tableName="yacht">
+            <column name="id" value="12"/>
+            <column name="name" value="Infinity One"/>
+            <column name="capacity" value="32"/>
+            <column name="type" value="Mega"/>
+            <column name="price" value="18000000"/>
+            <column name="available" value="true"/>
+            <column name="image" value="images/yacht/mega-yacht.jpg"/>
+        </insert>
+    </changeSet>
+
+
     <!-- Создание таблицы Booking -->
     <changeSet id="5" author="your_username">
         <createTable tableName="booking">

@@ -1,0 +1,98 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+    min-height: 100vh;
+}
+.yacht-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.yacht-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+}
+.yacht-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+.yacht-image {
+    width: 220px;
+    height: 165px;
+    object-fit: cover;
+    border-radius: 15px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.yacht-image:hover {
+    transform: scale(1.05);
+}
+.yacht-content {
+    flex: 1;
+}
+.yacht-name {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, #2bc0e4, #1f8f88); /* обновлено */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.yacht-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.yacht-details {
+    color: #4a5568;
+    font-size: 14px;
+    background: rgba(102, 126, 234, 0.1);
+    padding: 8px 12px;
+    border-radius: 25px;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+}
+.yacht-price {
+    font-size: 24px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #48bb78, #38a169);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.book-button {
+    background: linear-gradient(135deg, #2bc0e4, #1f8f88); /* обновлено */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(43, 192, 228, 0.3);
+}
+.book-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(43, 192, 228, 0.4);
+}
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}

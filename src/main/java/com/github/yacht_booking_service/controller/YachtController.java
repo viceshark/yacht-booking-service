@@ -9,7 +9,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
-
 public class YachtController {
 
     private final YachtService yachtService;
